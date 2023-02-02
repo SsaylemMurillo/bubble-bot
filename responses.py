@@ -1,4 +1,5 @@
-import random
+import spotipy
+from spotipy.oauth2 import SpotifyClientCredentials
 
 def handle_response(message) -> str:
     p_message = message.lower()
