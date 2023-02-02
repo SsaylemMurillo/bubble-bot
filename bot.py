@@ -8,8 +8,7 @@ async def send_message(message, user_message, is_private):
     except Exception as e:
         print(e)
 
-def run_discord_bot():
-    token = 'MTA3MDQxODE0MDA1NzU3NTQ5NQ.GuBO2z.w_FXeXEntSVNXtX91_XBMRriTcwLD-F7R5Gr5Q'
+def run_discord_bot(token) -> str:
     intents = discord.Intents.default()
     intents.message_content = True
     client = discord.Client(intents=intents)
@@ -29,9 +28,7 @@ def run_discord_bot():
 
         print(f"{username} said: '{user_message}' ({channel})")
 
-        if user_message[0] == '?':
+        if user_message[0] == '#':
             user_message = user_message[1:]
-            await send_message(message, user_message, is_private=True)
-        else:
             await send_message(message, user_message, is_private=False)
     client.run(token)

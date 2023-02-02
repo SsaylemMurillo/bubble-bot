@@ -1,0 +1,4 @@
+1. escuchar musica
+2. reproducir texto a voz en los canales de audio
+3. hacer encuestas
+4. hacer leves consultas en wikipedia
